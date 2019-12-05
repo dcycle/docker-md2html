@@ -22,7 +22,7 @@ MAJORVERSION='1'
 VERSION='1.0'
 
 # Start by getting the latest version of the official drupal image
-docker pull ubutnu
+docker pull ubuntu
 # Rebuild the entire thing
 docker build --no-cache -t dcycle/"$PROJECT":"$VERSION" .
 docker build -t dcycle/"$PROJECT":"$MAJORVERSION" .
