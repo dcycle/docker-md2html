@@ -31,6 +31,8 @@ If you manage a project on Drupal.org, you might have a README.md file in your p
     # To fix it we cannot use sed because it's used differently on different
     # systems, perl seems a good alternative, see
     # https://stackoverflow.com/a/4247319/1207752
-    perl -i -pe's/\)-&gt;/)->/g' README.html
+    perl -i -pe's/-&gt;/->/g' README.html
+    perl -i -pe's/&quot;/"/g' README.html
+    perl -i -pe"s/&#39;/'/g" README.html
 
 See [this project on the Docker Hub](https://hub.docker.com/r/dcycle/md2html/).
