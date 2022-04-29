@@ -1,9 +1,7 @@
-FROM ubuntu
+FROM alpine
 
 # Install packages required to get the latest package from GitHub.
-RUN apt-get update && \
-  apt-get -y --no-install-recommends install curl wget ca-certificates && \
-  rm -rf /var/lib/apt/lists/*
+RUN apk add --no-cache curl wget ca-certificates
 
 # apt-get install is out of date, so we are using a variant of a technique
 # described at
