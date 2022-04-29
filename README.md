@@ -5,7 +5,7 @@ Translate markdown to html with [pandoc](https://pandoc.org).
 For example:
 
     docker run --rm -v $(pwd)/example01:/app/code \
-      dcycle/md2html:1 -t html5 README.md -o README.html
+      dcycle/md2html:2 -t html5 README.md -o README.html
 
 Example with Drupal
 -----
@@ -18,9 +18,9 @@ If you manage a project on Drupal.org, you might have a README.md file in your p
     #
     set -e
 
-    docker pull dcycle/md2html:1
+    docker pull dcycle/md2html:2
     docker run --rm -v "$(pwd):/app/code" \
-      dcycle/md2html:1 -t html5 README.md -o README.html
+      dcycle/md2html:2 -t html5 README.md -o README.html
 
     # If one enters <code>&gt;</code> in Drupal.org, it is erroneously
     # output as <code class="language-php">&amp;gt;</code>; because we know
