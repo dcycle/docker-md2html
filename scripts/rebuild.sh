@@ -16,6 +16,8 @@ else
   source "$CREDENTIALS";
 fi
 
+./test.sh
+
 PROJECT=md2html
 DATE=`date '+%Y-%m-%d-%H-%M-%S-%Z'`
 MAJORVERSION='2'
